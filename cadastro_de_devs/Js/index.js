@@ -1,4 +1,7 @@
 const button = document.getElementById("btn_add_tech");
+const button_add = document.getElementById("btn_add");
+const dev = {};
+const devs = [];
 
 button.addEventListener("click", function tech(ev) {
   ev.preventDefault();
@@ -23,6 +26,7 @@ button.addEventListener("click", function tech(ev) {
   radio02_input.type = "radio";
   radio02_input.name = "year_experience";
   radio02_input.id = "0a2";
+  radio02_input.value = "0 a 2 anos";
 
   const radio34 = document.createElement("label");
   radio34.innerText = "3-4 anos";
@@ -33,6 +37,7 @@ button.addEventListener("click", function tech(ev) {
   radio34_input.type = "radio";
   radio34_input.name = "year_experience";
   radio34_input.id = "3a4";
+  radio34_input.value = "3 a 4 anos";
 
   const radio5 = document.createElement("label");
   radio5.innerText = "5+ anos";
@@ -43,6 +48,7 @@ button.addEventListener("click", function tech(ev) {
   radio5_input.type = "radio";
   radio5_input.name = "year_experience";
   radio5_input.id = "five";
+  radio5_input.value = "5+ anos";
 
   const btn_removed = document.createElement("button");
   btn_removed.innerText = "Remover";
@@ -60,4 +66,21 @@ button.addEventListener("click", function tech(ev) {
     radio5_input,
     btn_removed
   );
+});
+
+button_add.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  const name = document.getElementById("name_input").value;
+  dev.name = name;
+  const tecnologia = document.getElementById("name_tech").value;
+  dev.tech = tecnologia;
+  const experience = document.querySelector(
+    "input[name='year_experience']:checked"
+  ).value;
+  dev.experience = experience;
+  devs.push(dev);
+  console.log(devs);
+
+  document.getElementById("name_input").value = "";
+  document.getElementById("name_tech").value = "";
 });
