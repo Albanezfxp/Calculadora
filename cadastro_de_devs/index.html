@@ -19,23 +19,30 @@
     </header>
     <section>
       <div id="section_container">
-        <div id="h2_item">
-          <h2>Se cadastre!</h2>
-          <hr />
+        <div id="main_container">
+          <div id="h2_container">
+            <h2 class="h2_item">Se cadastre!</h2>
+          </div>
+          <div class="linha"></div>
+          <div id="form_container">
+            <form id="form_item">
+              <label class="name_completed" for="name">Nome completo: </label>
+              <input
+                type="text"
+                name="name"
+                id="name_input"
+                placeholder="Digite seu nome"
+              />
+              <br />
+              <button id="btn_add_tech">Adcionar tecnologia</button>
+              <br />
+              <div id="form_years"></div>
+              <div id="btn_add">
+                <button id="btn_add">Adcionar Dev</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div id="form_container">
-          <form id="form_item">
-            <label for="name">Nome completo</label>
-            <input type="text" name="name" id="name_input" />
-            <br />
-            <br />
-            <button id="btn_add_tech">Adcionar tecnologia</button>
-            <div id="form_years"></div>
-          </div>
-          <div id="btn_add">
-            <button id="btn_add">Adcionar Dev</button>
-          </div>
-        </form>
       </div>
     </section>
 

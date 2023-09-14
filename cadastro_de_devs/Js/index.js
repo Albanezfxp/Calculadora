@@ -10,6 +10,7 @@ button.addEventListener("click", function tech(ev) {
 
   const name_tech = document.createElement("label");
   name_tech.for = "tecnologia";
+  name_tech.id = "name_techh";
   name_tech.innerText = "Nome da tecnologia: ";
 
   const inpt_tech = document.createElement("input");
@@ -17,10 +18,14 @@ button.addEventListener("click", function tech(ev) {
   inpt_tech.name = "tecnologia";
   inpt_tech.id = "name_tech";
 
+  const h3 = document.createElement("h7");
+  h3.innerText = "Tempo de uso";
+  h3.id = "h7_item";
+
   const radio02 = document.createElement("label");
   radio02.innerText = "0-2 anos";
   radio02.for = "0a2";
-  radio02.id = "radio02";
+  radio02.id = "radio_item";
 
   const radio02_input = document.createElement("input");
   radio02_input.type = "radio";
@@ -31,7 +36,7 @@ button.addEventListener("click", function tech(ev) {
   const radio34 = document.createElement("label");
   radio34.innerText = "3-4 anos";
   radio34.for = "3a4";
-  radio34.id = "radio02";
+  radio34.id = "radio_item";
 
   const radio34_input = document.createElement("input");
   radio34_input.type = "radio";
@@ -42,7 +47,7 @@ button.addEventListener("click", function tech(ev) {
   const radio5 = document.createElement("label");
   radio5.innerText = "5+ anos";
   radio5.for = "five";
-  radio5.id = "radio_five";
+  radio5.id = "radio_item";
 
   const radio5_input = document.createElement("input");
   radio5_input.type = "radio";
@@ -58,6 +63,7 @@ button.addEventListener("click", function tech(ev) {
   section.append(
     name_tech,
     inpt_tech,
+    h3,
     radio02,
     radio02_input,
     radio34,
